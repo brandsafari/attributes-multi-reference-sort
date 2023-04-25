@@ -3,6 +3,7 @@ window.Webflow.push(() => {
    // Sorts a Webflow multi-reference list in ascending order
    // based on an alphanumeric sortvalue element
    const multiReferenceList = document.querySelector("[brs-multirefsort-element='list']")
+   if (!multiReferenceList) return
    const listItems = Array.from(multiReferenceList.querySelectorAll(".w-dyn-item"))
 
    listItems.forEach((li) => li.parentElement.removeChild(li))
