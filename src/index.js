@@ -11,7 +11,7 @@ window.Webflow.push(() => {
       const listItems = Array.from(multiReferenceList.querySelectorAll(".w-dyn-item"))
 
       const isAscending =
-         multiReferenceList.getAttribute("brs-multirefsort-order").toLowerCase() !== "desc"
+         multiReferenceList.getAttribute("brs-multirefsort-order")?.toLowerCase() !== "desc"
 
       listItems.forEach((li) => li.parentElement.removeChild(li))
       listItems.sort((a, b) => {
